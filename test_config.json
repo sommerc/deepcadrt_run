@@ -1,0 +1,17 @@
+{
+    "patch_x": 150,
+    "patch_y": 150,
+    "patch_t": 150,
+    "overlap_factor": 0.4,
+    "scale_factor": 1,
+    "test_datasize": 300,
+    "datasets_path": "datasets_path",
+    "pth_dir": "models",
+    "denoise_model": "denoise_model",
+    "output_dir": "./results",
+    "fmap": 16,
+    "GPU": "0",
+    "num_workers": 0,
+    "visualize_images_per_epoch": false,
+    "save_test_images_per_epoch": false
+}

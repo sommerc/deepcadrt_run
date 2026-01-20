@@ -1,0 +1,20 @@
+{
+    "patch_x": 150,
+    "patch_y": 150,
+    "patch_t": 150,
+    "overlap_factor": 0.4,
+    "scale_factor": 1,
+    "select_img_num": 1000000,
+    "train_datasets_size": 2048,
+    "datasets_path": "datasets_path",
+    "pth_dir": "models",
+    "n_epochs": 5,
+    "lr": 0.00005,
+    "b1": 0.5,
+    "b2": 0.999,
+    "fmap": 16,
+    "GPU": "0",
+    "num_workers": 0,
+    "visualize_images_per_epoch": false,
+    "save_test_images_per_epoch": false
+}

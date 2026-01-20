@@ -1,0 +1,21 @@
+[project]
+name = "deepcadrt-run"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Christoph Sommer", email = "christoph.sommer@ist.ac.at" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "loguru>=0.7.3",
+    "rich>=14.2.0",
+]
+
+[project.scripts]
+deepcadrt-train = "deepcadrt_run:train"
+deepcadrt-predict = "deepcadrt_run:predict"
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
