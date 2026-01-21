@@ -12,16 +12,27 @@ def load_config(config_path: str) -> dict:
     return config
 
 
-def get_train_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Training arguments for deepcadrt-run")
-    parser.add_argument("in_dir", type=str, help="Input directory for training data")
-    parser.add_argument(
-        "-c", "--train-config", type=str, help="Path to the configuration file"
-    )
-    return parser.parse_args()
+def create_config_template() -> None:
+    import shutil
+
+    for f in ["train_config.json", "test_config.json"]:
+        logger.info(f"Creating template config file: {f}")
+        shutil.copyfile(Path(__file__).parent / f, f)
 
 
 def train() -> None:
+    def get_train_args() -> argparse.Namespace:
+        parser = argparse.ArgumentParser(
+            description="Training arguments for deepcadrt-run"
+        )
+        parser.add_argument(
+            "in_dir", type=str, help="Input directory for training data"
+        )
+        parser.add_argument(
+            "-c", "--train-config", type=str, help="Path to the configuration file"
+        )
+        return parser.parse_args()
+
     logger.info("Starting DeepCAD RT training...")
     args = get_train_args()
 
@@ -44,17 +55,22 @@ def train() -> None:
     logger.info("Done!")
 
 
-def get_test_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Training arguments for deepcadrt-run")
-    parser.add_argument("in_dir", type=str, help="Input directory for prediction data")
-    parser.add_argument("model_path", type=str, help="Path to the trained model path")
-    parser.add_argument(
-        "-c", "--predict-config", type=str, help="Path to the configuration file"
-    )
-    return parser.parse_args()
-
-
 def predict() -> None:
+    def get_test_args() -> argparse.Namespace:
+        parser = argparse.ArgumentParser(
+            description="Training arguments for deepcadrt-run"
+        )
+        parser.add_argument(
+            "in_dir", type=str, help="Input directory for prediction data"
+        )
+        parser.add_argument(
+            "model_path", type=str, help="Path to the trained model path"
+        )
+        parser.add_argument(
+            "-c", "--predict-config", type=str, help="Path to the configuration file"
+        )
+        return parser.parse_args()
+
     logger.info("Starting DeepCAD RT prediction...")
 
     args = get_test_args()

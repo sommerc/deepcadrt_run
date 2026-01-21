@@ -21,6 +21,7 @@ dependencies = [
 [project.scripts]
 deepcadrt-train = "deepcadrt_run:train"
 deepcadrt-predict = "deepcadrt_run:predict"
+deepcadrt-config = "deepcadrt_run:create_config_template"
 
 [build-system]
 requires = ["uv_build>=0.9.26,<0.10.0"]
