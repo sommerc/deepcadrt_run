@@ -13,7 +13,7 @@ dependencies = [
     "torch==2.5.1", 
     "torchvision==0.20.1",
     "deepcad==1.2.0",
-    "setuptools", # required for gdown, which is pinned in deepcad
+    "setuptools<81", # required for gdown, which is pinned in deepcad
     "onnx", # again this deepcad dep is not set in deepcad
 ]
 
