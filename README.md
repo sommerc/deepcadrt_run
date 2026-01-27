@@ -89,7 +89,7 @@ This will:
 - **CUDA Issues:** Ensure your GPU drivers are up-to-date and compatible.
 - **Memory Errors:** Reduce patch size or train_datasets_size in config files for large datasets.
 - **Command Not Found:** Verify `uv` is installed and in your PATH.
-- For more help, check the [DeepCAD documentation](https://github.com/cabooster/DeepCAD) or open an issue on this repo.
+- For more help, check the [DeepCAD documentation](https://github.com/cabooster/DeepCAD-RT) or open an issue on this repo.
 
 ---
 
