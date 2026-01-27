@@ -18,6 +18,11 @@ dependencies = [
     "numpy==1.26.4" # 
 ]
 
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+
 [project.scripts]
 deepcadrt-train = "deepcadrt_run:train"
 deepcadrt-predict = "deepcadrt_run:predict"
