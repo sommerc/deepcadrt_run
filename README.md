@@ -34,7 +34,7 @@ Generate local configuration files for training and testing.
 Run the following command in your terminal:
 
 ```bash
-uvx --from deepcadrt-run deepcadrt-config
+uvx --from https://github.com/sommerc/deepcadrt_run.git deepcadrt-config
 ```
 
 This creates `train_config.json` and `test_config.json` in your current directory. Customize these files as needed (e.g., adjust parameters like patch size, number of epochs or learning rate).
@@ -51,7 +51,7 @@ Edit `train_config.json` to match your requirements (leave `dataset_path` unchan
 Run the training command:
 
 ```bash
-uvx --from deepcadrt-run deepcadrt-train "mymovies" -c train_config.json
+uvx --from https://github.com/sommerc/deepcadrt_run.git deepcadrt-train "mymovies" -c train_config.json
 ```
 
 This will:
@@ -71,7 +71,7 @@ Edit `test_config.json` as needed (leave `dataset_path` and `denoise_model` unch
 Run the prediction command:
 
 ```bash
-uvx --from deepcadrt-run deepcadrt-predict mymovies/ models/mymovies_202310011155 -c test_config.json
+uvx --from https://github.com/sommerc/deepcadrt_run.git deepcadrt-predict mymovies/ models/mymovies_202310011155 -c test_config.json
 ```
 
 This will:
